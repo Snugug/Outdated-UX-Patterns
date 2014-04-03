@@ -9,7 +9,10 @@ var shell = require('gulp-shell');
 // Lint Task
 //////////////////////////////
 gulp.task('lint', function () {
-  return gulp.src(options.html + '/' + options.js + '/**/*.js')
+  return gulp.src([
+    options.html + '/' + options.js + '/**/*.js',
+    '!' + options.html + '/' + options.js + '/**/*.min.js'
+    ])
     .pipe(jshint())
     .pipe(jshint.reporter(stylish))
 });
