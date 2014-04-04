@@ -42,7 +42,7 @@ GEM
     singularitygs (1.2.0)
       breakpoint (~> 2.4)
       sass (~> 3.3.0)
-    toolkit (2.0.1)
+    toolkit (2.2.0)
       sass (~> 3.3.0)
 
 PLATFORMS
@@ -55,4 +55,4 @@ DEPENDENCIES
   modular-scale (~> 2.0.4)
   sass (~> 3.3.0)
   singularitygs (~> 1.2.0)
-  toolkit (~> 2.0.0)
+  toolkit (~> 2.2.0)
