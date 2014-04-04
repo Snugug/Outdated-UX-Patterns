@@ -1,0 +1,8 @@
+@import "toolkit";
+
+@include font-face('Glyphicons Halflings', (
+  'eot': 'glyphicons/glyphicons-halflings-regular.eot',
+  'svg': 'glyphicons/glyphicons-halflings-regular.svg',
+  'ttf': 'glyphicons/glyphicons-halflings-regular.ttf',
+  'woff': 'glyphicons/glyphicons-halflings-regular.woff'
+), $inline-woff: true);

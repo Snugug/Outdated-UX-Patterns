@@ -64,3 +64,72 @@ img, video {
   max-width: 100%;
   height: auto;
 }
+
+#title {
+  display: none;
+}
+.title #title {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: black;
+  z-index: 10;
+  color: white;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  text-align: center;
+}
+.title #title h1 {
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  -ms-transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  position: relative;
+  padding: .25em;
+}
+
+#loading {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(28, 28, 28, 0.95);
+  z-index: 5;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.loaded #loading {
+  opacity: 0;
+  z-index: -1;
+  height: 0;
+  width: 0;
+  border-radius: 5em;
+  left: 50%;
+  top: 50%;
+}
+
+.loaded .container {
+  z-index: 1;
+}
+
+.carousel-inner > .item {
+  position: relative;
+  height: 0;
+  padding-top: 56.25%;
+  width: 100%;
+}
+.carousel-inner > .item img {
+  display: block;
+  position: absolute;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
