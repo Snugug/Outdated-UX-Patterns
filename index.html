@@ -5,11 +5,11 @@
   <title>5 Outdated UX Patterns that are Losing You Money!</title>
   <meta name="viewport" content="initial-scale=1.0">
   <!-- build:css app.css -->
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="bower_components/yamm3/yamm/yamm.css">
   <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
   <!-- endbuild -->
 </head>
 <body class="title loading">
@@ -18,7 +18,7 @@
   </div>
   <div id="loading"></div> -->
 
-  <nav class="navbar yamm navbar-default">
+  <nav class="navbar yamm navbar-default" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
         <button class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
@@ -30,27 +30,66 @@
         <a href="#" class="navbar-brand">Outdated UX Patterns</a>
       </div>
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse" id="main-nav">
         <ul class="nav navbar-nav">
           <li class="dropdown yamm-fw">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Electronics <b class="caret"></b></a>
-            <ul class="dropdown-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="recipes-menus">Recipes & Menus <b class="caret"></b></a>
+            <ul id="recipe-mega-menu" class="dropdown-menu">
+              <li class="yamm-content">
+                <div class="row">
+                  <div class="col-sm-2">
+                    <ul class="list-unstyled">
+                      <li><p><a href="#">Top-Rated Recipes</a></p></li>
+                      <li><p><a href="#">Holiday Recipes</a></p></li>
+                      <li><p><a href="#">Quick & Easy Recipes</a></p></li>
+                      <li><p><a href="#">Seasonal Recipes</a></p></li>
+                      <li><p><a href="#">Buzz Box</a></p></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-2">
+                    <ul class="list-unstyled">
+                      <li><p><a href="#">Recipe Collections</a></p></li>
+                      <li><p><a href="#">Latest Recipes</a></p></li>
+                      <li><p><a href="#">Healthy Recipes</a></p></li>
+                      <li><p><a href="#">Desert Recipes</a></p></li>
+                      <li><p><a href="#">Cocktail Recipes</a></p></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <img src="images/churro.jpeg" alt="">
+                  </div>
+                  <div class="col-sm-3">
+                    <h2>Chew a Churro</h2>
+                    <p>28 reasons why churros (and churro bites) – baked or fried, glazed or dusted – are perfect morning, noon, and night</p>
+                    <p><a href="#">plus: everything you need to know about making churros at home ›</a></p>
+                  </div>
+                </div>
+                <footer class="row top-buffer">
+                    <p class="clearfix col-sm-12"><strong>BROWSE RECIPES:</strong> Slow-cooker | Meatloaf | Soup | Chili <button class="btn btn-danger btn-xs pull-right">ALL RECIPES</button></p>
+
+
+                </footer>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown yamm-fw">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="electronics-menus">Electronics <b class="caret"></b></a>
+            <ul id="mega-menu" class="dropdown-menu">
               <li class="yamm-content">
                 <div class="row">
 
                   <!-- Accordion -->
-                  <div id="articles" class="panel-group col-sm-3">
-
+                  <div class="col-sm-3">
                     <ul class="list-unstyled">
                       <li><p><strong>Editor's Picks</strong></p></li>
-                      <li><p></p><a href="#">5 Outdated UX Patterns that are Losing Your Money!</a></p></li>
-                      <li><p></p><a href="#">10 Alternatives to Modern Medicine Apps You've Gotta See To Believe.</a></p></li>
-                      <li><p></p><a href="#">What Twitter Client Are you?</a></p></li>
+                      <li><p><a href="#">5 Outdated UX Patterns that are Losing Your Money!</a></p></li>
+                      <li><p><a href="#">10 Alternatives to Modern Medicine Apps You've Gotta See To Believe.</a></p></li>
+                      <li><p><a href="#">What Twitter Client Are you?</a></p></li>
                       <li class="divider"></li>
                       <li><p><strong>Trending Now</strong></p></li>
-                      <li><p></p><a href="#">An iPhone, an Android, and a Windows Device Walk Into a Bar. You Won't Believe What Happens Next.</a></p></li>
-                      <li><p></p><a href="#">7 Cutest Crochet Covers on Etsy</a></p></li>
-                      <li><p></p><a href="#">These Phone Covers Look Exactly Like Food</a></p></li>
+                      <li><p><a href="#">An iPhone, an Android, and a Windows Device Walk Into a Bar. You Won't Believe What Happens Next.</a></p></li>
+                      <li><p><a href="#">7 Cutest Crochet Covers on Etsy</a></p></li>
+                      <li><p><a href="#">These Phone Covers Look Exactly Like Food</a></p></li>
                     </ul>
 
                   </div>
@@ -246,7 +285,7 @@
                       <!-- Item -->
                       <div class="item active">
                         <img src="images/4chan.gif" alt="Cat using a Computer">
-                        <div class="carousel-caption">Stop Your Cat From Torrenting Movies!</div>
+                        <div class="carousel-caption">Stop Your Cat From Downloading Movies!</div>
                       </div>
                       <!-- Item -->
                       <div class="item">
@@ -281,19 +320,47 @@
             </ul>
           </li>
         </ul>
+        <div id="social">
+          <div class="fb-like" data-href="http://snugug.com/presentations" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://snugug.com/presentations" data-via="snugug" data-lang="en">Tweet</a>
+          <div class="g-plusone" data-size="medium" data-href="http://snugug.com/presentations"></div>
+        </div>
       </div>
-<!--     <ul class="nav navbar-nav">
-
-    </ul> -->
   </nav>
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="page-header">5 Outdated UX Patterns That Are Losing You Money!</h1>
+      <p>And how to get your money back.</p>
+    </div>
+  </div>
+
+  <main class="container">
+
+  </main>
 <!--
-  <div class="container">
-    <h1 id="intro">Hello World</h1>
-  </div> -->
+  <div class="custom-jumbotron">
+    <img src="images/metalbeard.jpg" alt="Metal Beard">
+  </div>
+ -->
 
-
-
-
+  <!-- Social -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=185414318203224";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <script type="text/javascript">
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/platform.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script>
   <!-- build:js js/app.js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/zoomooz/jquery.zoomooz.js"></script>

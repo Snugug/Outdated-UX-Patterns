@@ -6,6 +6,7 @@
   });
 
   var step = 0;
+  var timing = 650;
 
   //////////////////////////////
   // Set up loading spinner
@@ -25,15 +26,39 @@
     hwaccel: true, // Whether to use hardware acceleration
   });
 
-  //////////////////////////////
-  // Watch for Keypresses
-  //////////////////////////////
-  $('body').keypress(function (e) {
-    if (e.charCode === 32 && e.shiftKey === false) {
-      steps('forward');
+  var forward = function (e) {
+    if (e.keyCode === 34 || e.keyCode === 39 || (e.keyCode === 32 && e.shiftKey === false)) {
+      e.preventDefault();
+      return true;
     }
-    else if (e.charCode === 32 && e.shiftKey === true) {
-      steps('backward');
+    else {
+      return false;
+    }
+  }
+
+  var backward = function (e) {
+    if (e.keyCode === 33 || e.keyCode === 37 || (e.keyCode === 32 && e.shiftKey === true)) {
+      e.preventDefault();
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+  //////////////////////////////
+  // Watch for Keydown
+  //////////////////////////////
+  document.querySelector('body').addEventListener('keydown', function (e) {
+
+    if (e.keyCode === 27) {
+      $('body').zoomTo();
+      step = 0;
+      return;
+    }
+
+    if (forward(e)) {
+      steps('forward');
     }
   });
 
@@ -51,29 +76,59 @@
     if (step < 0) {
       step = 0;
     }
-    else if (step > 3) {
+    else if (step > 5) {
       step = 0;
     }
 
     console.log('Step ' + step);
 
     switch (step) {
-      case 0:
-        $('body').toggleClass('loading').toggleClass('loaded');
-        $('body').toggleClass('title');
-        $('body').zoomTo();
-        break;
       case 1:
-        $('body').toggleClass('title');
-        $('body').zoomTo();
+        $('#recipes-menus').trigger('click');
+        window.setTimeout(function () {
+          $('#recipe-mega-menu').zoomTo();
+        }, timing);
         break;
       case 2:
-        $('body').toggleClass('loading').toggleClass('loaded');
         $('body').zoomTo();
+        window.setTimeout(function () {
+          $('#electronics-menus').trigger('click');
+        }, timing);
+        window.setTimeout(function () {
+          $('#mega-menu').zoomTo();
+        }, timing * 2);
         break;
       case 3:
-        $('#intro').zoomTo();
+        $('#carousel-megamenu').zoomTo();
         break;
+      case 4:
+        $('body').zoomTo();
+        window.setTimeout(function () {
+          $('#electronics-menus').trigger('click');
+        }, timing);
+        window.setTimeout(function () {
+          $("#social").zoomTo();
+        }, timing * 2);
+        break;
+      case 5:
+        $('body').zoomTo();
+        break;
+      // case 0:
+      //   $('body').toggleClass('loading').toggleClass('loaded');
+      //   $('body').toggleClass('title');
+      //   $('body').zoomTo();
+      //   break;
+      // case 1:
+      //   $('body').toggleClass('title');
+      //   $('body').zoomTo();
+      //   break;
+      // case 2:
+      //   $('body').toggleClass('loading').toggleClass('loaded');
+      //   $('body').zoomTo();
+      //   break;
+      // case 3:
+      //   $('#intro').zoomTo();
+      //   break;
     }
   };
 

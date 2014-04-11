@@ -21,7 +21,7 @@ $browser-minimum-versions: (
 ////////////////////////
 // Compass Imports
 @import "compass";
-@import "compass/reset";
+// @import "compass/reset";
 ////////////////////////
 
 ////////////////////////
@@ -104,4 +104,50 @@ $browser-minimum-versions: (
 
 .carousel-inner > .item {
   @include ir($elements: 'img')
+}
+
+.custom-jumbotron {
+  @include ir(1280/720, $elements: 'img', $position: bottom);
+}
+
+.top-buffer {
+  margin-top: 20px;
+}
+
+#social {
+  padding-bottom: 20px;
+  @include breakpoint(768px) {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    padding-bottom: 0;
+  }
+
+}
+
+[id^="twitter-widget"] {
+  margin-bottom: -5px;
+}
+[id^="___plusone"] {
+  bottom: -5px;
+  position: relative;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.jumbotron {
+  background: image-url('dolladollabill.jpg');
+
+  h1 {
+    color: #c2200f;
+    text-shadow: 3px 2px 1px #3c3c3c;
+    border-color: transparent;
+  }
+
+  p {
+    color: #ab0d4b;
+    text-shadow: 1px 1px 0px #3c3c3c;
+  }
 }
