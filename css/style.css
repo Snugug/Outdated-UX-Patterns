@@ -181,3 +181,17 @@ h1, h2, h3, h4, h5 h6 {
 #recipe-mega-menu footer p {
   margin-bottom: 0;
 }
+
+section .page-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+section .page-header h1 {
+  float: left;
+}
+section .page-header #social {
+  position: relative;
+  float: right;
+  padding-bottom: 20px;
+}

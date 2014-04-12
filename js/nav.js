@@ -137,12 +137,12 @@
         window.setTimeout(function () {
           $('#overlay-content').zoomTo();
         }, timing * 2.5);
+        break;
       case 6:
-        $('#overlay-close').trigger('click');
+        $('body').zoomTo();
         window.setTimeout(function () {
-          $('body').zoomTo();
+          $('#overlay-close').trigger('click');
         }, timing * 2);
-
         break;
       // case 0:
       //   $('body').toggleClass('loading').toggleClass('loaded');
