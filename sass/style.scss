@@ -205,3 +205,12 @@ section .page-header {
     padding-bottom: 20px;
   }
 }
+
+.navbar, .jumbotron, .container {
+  opacity: 0;
+  @include transition(opacity 1s);
+
+  .loaded & {
+    opacity: 1;
+  }
+}

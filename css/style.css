@@ -195,3 +195,12 @@ section .page-header #social {
   float: right;
   padding-bottom: 20px;
 }
+
+.navbar, .jumbotron, .container {
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+.loaded .navbar, .loaded .jumbotron, .loaded .container {
+  opacity: 1;
+}
