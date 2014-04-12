@@ -50,7 +50,6 @@
   // Watch for Keydown
   //////////////////////////////
   document.querySelector('body').addEventListener('keydown', function (e) {
-
     if (e.keyCode === 27) {
       $('body').zoomTo();
       step = 0;
@@ -58,38 +57,41 @@
     }
 
     if (forward(e)) {
-      steps('forward');
+      stepForward();
+    }
+    else if (backward(e)) {
+      stepBackward();
     }
   });
 
   //////////////////////////////
   // Steps
   //////////////////////////////
-  var steps = function (direction) {
-    if (direction === 'forward') {
-      step++;
-    }
-    else {
-      step--;
-    }
-
-    if (step < 0) {
+  var stepForward = function () {
+    step++;
+    if (step > 8) {
       step = 0;
     }
-    else if (step > 6) {
-      step = 0;
-    }
-
-    console.log('Step ' + step);
 
     switch (step) {
+      case 0:
+        $('body').toggleClass('loading').toggleClass('loaded');
+        $('body').toggleClass('title');
+        break;
       case 1:
+        $('body').toggleClass('title');
+        break;
+      case 2:
+        $('body').toggleClass('loading').toggleClass('loaded');
+        $('body').zoomTo();
+        break;
+      case 3:
         $('#recipes-menus').trigger('click');
         window.setTimeout(function () {
           $('#recipe-mega-menu').zoomTo();
         }, timing);
         break;
-      case 2:
+      case 4:
         $('body').zoomTo();
         window.setTimeout(function () {
           $('#electronics-menus').trigger('click');
@@ -115,12 +117,11 @@
         window.setTimeout(function () {
           $('#device-gaming-toggle').trigger('click');
         }, timing * 24);
-
         break;
-      case 3:
+      case 5:
         $('#carousel-megamenu').zoomTo();
         break;
-      case 4:
+      case 6:
         $('body').zoomTo();
         window.setTimeout(function () {
           $('#electronics-menus').trigger('click');
@@ -129,7 +130,7 @@
           $('#social').zoomTo();
         }, timing * 2);
         break;
-      case 5:
+      case 7:
         $('body').zoomTo();
         window.setTimeout(function () {
           $('#overlay-btn').trigger('click');
@@ -138,29 +139,76 @@
           $('#overlay-content').zoomTo();
         }, timing * 2.5);
         break;
-      case 6:
+      case 8:
         $('body').zoomTo();
         window.setTimeout(function () {
           $('#overlay-close').trigger('click');
         }, timing * 2);
         break;
-      // case 0:
-      //   $('body').toggleClass('loading').toggleClass('loaded');
-      //   $('body').toggleClass('title');
-      //   $('body').zoomTo();
-      //   break;
-      // case 1:
-      //   $('body').toggleClass('title');
-      //   $('body').zoomTo();
-      //   break;
-      // case 2:
-      //   $('body').toggleClass('loading').toggleClass('loaded');
-      //   $('body').zoomTo();
-      //   break;
-      // case 3:
-      //   $('#intro').zoomTo();
-      //   break;
     }
+  };
+
+  var stepBackward = function () {
+    step--;
+    if (step < 0) {
+      step = 8;
+    }
+
+    switch (step) {
+      case 0:
+        $('body').toggleClass('title');
+        break;
+      case 1:
+        $('body').toggleClass('loading').toggleClass('loaded');
+        break;
+      case 2:
+        $('body').zoomTo();
+        window.setTimeout(function () {
+          $('#recipes-menus').trigger('click');
+        }, timing);
+        break;
+      case 3:
+        $('body').zoomTo();
+        window.setTimeout(function () {
+          $('#recipes-menus').trigger('click');
+        }, timing);
+        window.setTimeout(function () {
+          $('#recipe-mega-menu').zoomTo();
+        }, timing * 2);
+        break;
+      case 4:
+        $('#mega-menu').zoomTo();
+        break;
+      case 5:
+        $('body').zoomTo();
+        window.setTimeout(function () {
+          $('#electronics-menus').trigger('click');
+        }, timing);
+        window.setTimeout(function () {
+          $('#carousel-megamenu').zoomTo();
+        }, timing * 2);
+        break;
+      case 6:
+        $('body').zoomTo();
+        window.setTimeout(function () {
+          $('#overlay-close').trigger('click');
+        }, timing);
+        window.setTimeout(function () {
+          $('#social').zoomTo();
+        }, timing * 2.5);
+        break;
+      case 7:
+        $('#overlay-btn').trigger('click');
+        window.setTimeout(function () {
+          $('#overlay-content').zoomTo();
+        }, timing * 1.5);
+        break;
+      case 8:
+        $('body').toggleClass('loading').toggleClass('loaded');
+        $('body').toggleClass('title');
+        break;
+    }
+
   };
 
   $('#intro').zoomTarget();
