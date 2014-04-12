@@ -34,7 +34,7 @@
     else {
       return false;
     }
-  }
+  };
 
   var backward = function (e) {
     if (e.keyCode === 33 || e.keyCode === 37 || (e.keyCode === 32 && e.shiftKey === true)) {
@@ -44,7 +44,7 @@
     else {
       return false;
     }
-  }
+  };
 
   //////////////////////////////
   // Watch for Keydown
@@ -76,7 +76,7 @@
     if (step < 0) {
       step = 0;
     }
-    else if (step > 5) {
+    else if (step > 6) {
       step = 0;
     }
 
@@ -97,6 +97,25 @@
         window.setTimeout(function () {
           $('#mega-menu').zoomTo();
         }, timing * 2);
+        window.setTimeout(function () {
+          $('#device-phones-toggle').trigger('click');
+        }, timing * 4);
+        window.setTimeout(function () {
+          $('#device-phablets-toggle').trigger('click');
+        }, timing * 8);
+        window.setTimeout(function () {
+          $('#device-tablets-toggle').trigger('click');
+        }, timing * 12);
+        window.setTimeout(function () {
+          $('#device-desktops-toggle').trigger('click');
+        }, timing * 16);
+        window.setTimeout(function () {
+          $('#device-gaming-toggle').trigger('click');
+        }, timing * 20);
+        window.setTimeout(function () {
+          $('#device-gaming-toggle').trigger('click');
+        }, timing * 24);
+
         break;
       case 3:
         $('#carousel-megamenu').zoomTo();
@@ -107,11 +126,23 @@
           $('#electronics-menus').trigger('click');
         }, timing);
         window.setTimeout(function () {
-          $("#social").zoomTo();
+          $('#social').zoomTo();
         }, timing * 2);
         break;
       case 5:
         $('body').zoomTo();
+        window.setTimeout(function () {
+          $('#overlay-btn').trigger('click');
+        }, timing);
+        window.setTimeout(function () {
+          $('#overlay-content').zoomTo();
+        }, timing * 2.5);
+      case 6:
+        $('#overlay-close').trigger('click');
+        window.setTimeout(function () {
+          $('body').zoomTo();
+        }, timing * 2);
+
         break;
       // case 0:
       //   $('body').toggleClass('loading').toggleClass('loaded');
