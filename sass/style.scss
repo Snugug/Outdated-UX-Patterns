@@ -111,7 +111,8 @@ $browser-minimum-versions: (
 }
 
 .top-buffer {
-  margin-top: 20px;
+  padding-top: 20px;
+  clear: both;
 }
 
 #social {
@@ -141,13 +142,52 @@ $browser-minimum-versions: (
   background: image-url('dolladollabill.jpg');
 
   h1 {
-    color: #c2200f;
-    text-shadow: 3px 2px 1px #3c3c3c;
-    border-color: transparent;
+    color: #d9534f !important;
+    text-shadow: 1px 1px 1px #3c3c3c;
   }
 
   p {
-    color: #ab0d4b;
-    text-shadow: 1px 1px 0px #3c3c3c;
+    color: white !important;
+    text-shadow: 1px 1px 1px #3c3c3c;
   }
+}
+
+body {
+  font-family: 'comic-neue', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+}
+
+h1, h2, h3, h4, h5 h6 {
+  font-family: "Comic Sans MS", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+}
+
+@include font-face('comic-neue', (
+  'eot': 'comic-neue/ComicNeue-Regular.eot',
+  'ttf': 'comic-neue/ComicNeue-Regular.ttf',
+  'wof': 'comic-neue/ComicNeue-Regular.wof'
+), normal, normal, true);
+
+@include font-face('comic-neue', (
+  'eot': 'comic-neue/ComicNeue-Regular-Oblique.eot',
+  'ttf': 'comic-neue/ComicNeue-Regular-Oblique.ttf',
+  'wof': 'comic-neue/ComicNeue-Regular-Oblique.wof'
+), normal, italic, true);
+
+@include font-face('comic-neue', (
+  'eot': 'comic-neue/ComicNeue-Bold.eot',
+  'ttf': 'comic-neue/ComicNeue-Bold.ttf',
+  'wof': 'comic-neue/ComicNeue-Bold.wof'
+), bold, normal, true);
+
+@include font-face('comic-neue', (
+  'eot': 'comic-neue/ComicNeue-Bold-Oblique.eot',
+  'ttf': 'comic-neue/ComicNeue-Bold-Oblique.ttf',
+  'wof': 'comic-neue/ComicNeue-Bold-Oblique.wof'
+), bold, italic, true);
+
+#recipe-mega-menu .list-unstyled > li > strong {
+  text-transform: uppercase;
+}
+
+#recipe-mega-menu footer p {
+  margin-bottom: 0;
 }

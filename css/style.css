@@ -97,7 +97,8 @@ img, video {
 }
 
 .top-buffer {
-  margin-top: 20px;
+  padding-top: 20px;
+  clear: both;
 }
 
 #social {
@@ -129,11 +130,54 @@ img, video {
   background: url('../images/dolladollabill.jpg?1397238155');
 }
 .jumbotron h1 {
-  color: #c2200f;
-  text-shadow: 3px 2px 1px #3c3c3c;
-  border-color: transparent;
+  color: #d9534f !important;
+  text-shadow: 1px 1px 1px #3c3c3c;
 }
 .jumbotron p {
-  color: #ab0d4b;
-  text-shadow: 1px 1px 0px #3c3c3c;
+  color: white !important;
+  text-shadow: 1px 1px 1px #3c3c3c;
+}
+
+body {
+  font-family: 'comic-neue', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+}
+
+h1, h2, h3, h4, h5 h6 {
+  font-family: "Comic Sans MS", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+}
+
+@font-face {
+  font-family: "comic-neue";
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/comic-neue/ComicNeue-Regular.eot?1391639656') format("embedded-opentype");
+  src: url('../fonts/comic-neue/ComicNeue-Regular.eot?1391639656#iefix') format("embedded-opentype"), url('../fonts/comic-neue/ComicNeue-Regular.ttf?1391639656') format("truetype");
+}
+@font-face {
+  font-family: "comic-neue";
+  font-weight: normal;
+  font-style: italic;
+  src: url('../fonts/comic-neue/ComicNeue-Regular-Oblique.eot?1396949622') format("embedded-opentype");
+  src: url('../fonts/comic-neue/ComicNeue-Regular-Oblique.eot?1396949622#iefix') format("embedded-opentype"), url('../fonts/comic-neue/ComicNeue-Regular-Oblique.ttf?1396949622') format("truetype");
+}
+@font-face {
+  font-family: "comic-neue";
+  font-weight: bold;
+  font-style: normal;
+  src: url('../fonts/comic-neue/ComicNeue-Bold.eot?1391639656') format("embedded-opentype");
+  src: url('../fonts/comic-neue/ComicNeue-Bold.eot?1391639656#iefix') format("embedded-opentype"), url('../fonts/comic-neue/ComicNeue-Bold.ttf?1391639656') format("truetype");
+}
+@font-face {
+  font-family: "comic-neue";
+  font-weight: bold;
+  font-style: italic;
+  src: url('../fonts/comic-neue/ComicNeue-Bold-Oblique.eot?1396950032') format("embedded-opentype");
+  src: url('../fonts/comic-neue/ComicNeue-Bold-Oblique.eot?1396950032#iefix') format("embedded-opentype"), url('../fonts/comic-neue/ComicNeue-Bold-Oblique.ttf?1396950032') format("truetype");
+}
+#recipe-mega-menu .list-unstyled > li > strong {
+  text-transform: uppercase;
+}
+
+#recipe-mega-menu footer p {
+  margin-bottom: 0;
 }
