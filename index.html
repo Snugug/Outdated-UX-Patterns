@@ -5,11 +5,12 @@
   <title>5 Outdated UX Patterns that are Losing You Money!</title>
   <meta name="viewport" content="initial-scale=1.0">
   <!-- build:css app.css -->
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="bower_components/yamm3/yamm/yamm.css">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/style.css">
+
   <!-- endbuild -->
 </head>
 <body class="title loading">
@@ -18,6 +19,60 @@
   </div>
   <div id="loading"></div> -->
 
+  <!-- Modal -->
+  <div id="overlay" class="modal fade">
+    <div class="modal-dialog">
+      <div id="overlay-content" class="modal-content">
+        <div class="modal-header">
+          <button id="overlay-close" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <div class="page-title">
+            <h4 class="modal-title">Overlay of Awesomeness <small>or is it…</small></h4>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <img src="images/page-preloaders.svg" alt="Page Preloaders">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <img src="images/mega-menus.svg" alt="Mega Menus">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <img src="images/carousels.svg" alt="Carousels">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <img src="images/social-share-buttons.svg" alt="Social Share Buttons">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <img src="images/overlays.svg" alt="Overlays">
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <a href="http://snugug.com" class="btn btn-primary">Take Me To Your Leader</a>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <!-- Nav -->
   <nav class="navbar yamm navbar-default" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -32,30 +87,48 @@
 
       <div class="collapse navbar-collapse" id="main-nav">
         <ul class="nav navbar-nav">
-          <li class="dropdown yamm-fw">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="recipes-menus">Recipes & Menus <b class="caret"></b></a>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="recipes-menus">Furniture <b class="caret"></b></a>
             <ul id="recipe-mega-menu" class="dropdown-menu">
               <li class="yamm-content">
                 <div class="row">
-                  <div class="col-sm-2">
-                    <ul class="list-unstyled">
-                      <li><p><a href="#">Top-Rated Recipes</a></p></li>
-                      <li><p><a href="#">Holiday Recipes</a></p></li>
-                      <li><p><a href="#">Quick & Easy Recipes</a></p></li>
-                      <li><p><a href="#">Seasonal Recipes</a></p></li>
-                      <li><p><a href="#">Buzz Box</a></p></li>
-                    </ul>
-                  </div>
-                  <div class="col-sm-2">
-                    <ul class="list-unstyled">
-                      <li><p><a href="#">Recipe Collections</a></p></li>
-                      <li><p><a href="#">Latest Recipes</a></p></li>
-                      <li><p><a href="#">Healthy Recipes</a></p></li>
-                      <li><p><a href="#">Desert Recipes</a></p></li>
-                      <li><p><a href="#">Cocktail Recipes</a></p></li>
-                    </ul>
+                  <div class="col-sm-3">
+                    <ul class="list-unstyled"> <li><strong>Living & Family Room</strong></li> <li> <a href="#"> All Living &amp; Family Room </a> </li> <li> <a href="#"> Sofas </a> </li> <li> <a href="#"> Sectionals </a> </li> <li> <a href="#"> Chairs &amp; Ottomans </a> </li> <li> <a href="#"> Benches &amp; Trunks </a> </li> <li> <a href="#"> Coffee &amp; Accent Tables </a> </li> <li> <a href="#"> Media Stands &amp; Consoles </a> </li> <li> <a href="#"> Media Centers </a> </li> <li> <a href="#"> Cabinets &amp; Bookcases </a> </li> <li> <a href="#"> Game Tables </a> </li> <li> <a href="#"> Living Room Collections </a> </li> </ul>
+
+                    <br>
+
+                    <ul class="list-unstyled"> <li><strong>Bedroom</strong></li> <li> <a href="#"> All Bedroom </a> </li> <li> <a href="#"> Beds &amp; Headboards </a> </li> <li> <a href="#"> Bedside Tables &amp; Dressers </a> </li> <li> <a href="#"> Bed &amp; Dresser Sets </a> </li> <li> <a href="#"> Beds $999 &amp; Under </a> </li> <li> <a href="#"> Mattresses </a> </li> <li> <a href="#"> Accent Furniture </a> </li> <li> <a href="#"> Bedroom Collections </a> </li> </ul>
                   </div>
                   <div class="col-sm-3">
+                    <ul class="list-unstyled"> <li><strong>Dining Room & Kitchen</strong></li> <li> <a href="#"> All Dining Room &amp; Kitchen </a> </li> <li> <a href="#"> Tables </a> </li> <li> <a href="#"> Chairs </a> </li> <li> <a href="#"> Bar Stools </a> </li> <li> <a href="#"> Benches &amp; Banquettes </a> </li> <li> <a href="#"> Bars </a> </li> <li> <a href="#"> Buffets &amp; Cabinets </a> </li> <li> <a href="#"> Dining Sets </a> </li> <li> <a href="#"> Dining Collections </a> </li> </ul>
+
+                    <br>
+
+                    <ul class="list-unstyled"> <li><strong>Home Office</strong></li> <li> <a href="#"> All Home Office </a> </li> <li> <a href="#"> Desks </a> </li> <li> <a href="#"> Desk Chairs </a> </li> <li> <a href="#"> Storage </a> </li> <li> <a href="#"> Home Office Collections </a> </li> </ul>
+
+                    <br>
+
+                    <ul class="list-unstyled"> <li><strong>More Rooms</strong></li> <li> <a href="#"> Entryway </a> </li> <li> <a href="#"> Entryway Collections </a> </li> <li> <a href="#"> Bathroom </a> </li> <li> <a href="#"> Family Game Room </a> </li> <li> <a href="#"> Small Spaces </a> </li> </ul>
+                  </div>
+                  <div class="col-sm-2">
+                    <ul class="list-unstyled"> <li><strong>Room Ideas</strong></li> <li> <a href="#"> Living Rooms </a> </li> <li> <a href="#"> Media Rooms </a> </li> <li> <a href="#"> Dining Rooms </a> </li> <li> <a href="#"> Kitchens </a> </li> <li> <a href="#"> Bedrooms </a> </li> <li> <a href="#"> Home Offices </a> </li> <li> <a href="#"> Entryways </a> </li> <li> <a href="#"> Bathrooms </a> </li> <li> <a href="#"> Small Spaces </a> </li> </ul>
+                  </div>
+                  <div class="col-sm-2">
+                    <ul class="list-unstyled"> <li><strong>Features</strong></li> <li> <a href="#"> What's New </a> </li> <li> <a href="#"> The Leather Collection </a> </li> <li> <a href="#"> Performance Fabrics </a> </li> <li> <a href="#"> Furniture Brochures </a> </li> <li> <a href="#"> Earth Friendly Shop </a> </li> <li> <a href="#"> Fabric by the Yard </a> </li> <li> <a href="#"> The Linen Shop </a> </li> <li> <a href="#"> Interior Design Tools </a> </li> </ul>
+
+                    <br>
+
+                    <ul class="list-unstyled"> <li><strong>Great Deals</strong></li> <li> <a href="#"> Spring Clearance </a> </li> <li> <a href="#"> Upholstery &amp; Slipcover Event </a> </li> <li> <a href="#"> Everyday Values </a> </li> <li> <a href="#"> Delivery Discounts </a> </li> <li> <a href="#" class="text-danger"> Sale </a> </li> </ul>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="thumbnail">
+                      <img src="images/churro.jpeg" alt="Churro">
+                    </div>
+                    <p><strong>CHURROS IN THE KITCHEN</strong></p>
+                      <p>Save up to 30% on all south-of-the-border themed kitchenware</p>
+                      <p><a href="#">Shop Now ›</a></p>
+                  </div>
+                  <!-- <div class="col-sm-3">
                     <img src="images/churro.jpeg" alt="">
                   </div>
                   <div class="col-sm-3">
@@ -63,9 +136,9 @@
                     <p>28 reasons why churros (and churro bites) – baked or fried, glazed or dusted – are perfect morning, noon, and night</p>
                     <p><a href="#">plus: everything you need to know about making churros at home ›</a></p>
                   </div>
-                </div>
+                </div> -->
                 <footer class="row top-buffer">
-                    <p class="clearfix col-sm-12"><strong>BROWSE RECIPES:</strong> Slow-cooker | Meatloaf | Soup | Chili <button class="btn btn-danger btn-xs pull-right">ALL RECIPES</button></p>
+                    <p class="clearfix col-sm-12"><strong>TOP SELLERS:</strong> Old-Fashioned Wooden Trunk | Leather Sofa | 8x10 Real Faux Oriental Rug | Metal Pig Statue <button class="btn btn-danger btn-xs pull-right">ALL FURNITURE</button></p>
 
 
                 </footer>
@@ -99,7 +172,7 @@
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <h4 class="panel-title">
-                          <a href="#device-phones" data-toggle="collapse" data-parent="#devices">Phones</a>
+                          <a id="device-phones-toggle" href="#device-phones" data-toggle="collapse" data-parent="#devices">Phones</a>
                         </h4>
                       </div>
                       <div id="device-phones" class="panel-collapse collapse">
@@ -148,7 +221,7 @@
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <h4 class="panel-title">
-                          <a href="#device-phablets" data-toggle="collapse" data-parent="#devices">Phablets</a>
+                          <a id="device-phablets-toggle" href="#device-phablets" data-toggle="collapse" data-parent="#devices">Phablets</a>
                         </h4>
                       </div>
                       <div id="device-phablets" class="panel-collapse collapse">
@@ -173,7 +246,7 @@
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <h4 class="panel-title">
-                          <a href="#device-tablets" data-toggle="collapse" data-parent="#devices">Tablets</a>
+                          <a id="device-tablets-toggle" href="#device-tablets" data-toggle="collapse" data-parent="#devices">Tablets</a>
                         </h4>
                       </div>
                       <div id="device-tablets" class="panel-collapse collapse">
@@ -211,7 +284,7 @@
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <h4 class="panel-title">
-                          <a href="#device-desktops" data-toggle="collapse" data-parent="#devices">Desktops</a>
+                          <a id="device-desktops-toggle" href="#device-desktops" data-toggle="collapse" data-parent="#devices">Desktops</a>
                         </h4>
                       </div>
                       <div id="device-desktops" class="panel-collapse collapse">
@@ -237,7 +310,7 @@
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <h4 class="panel-title">
-                          <a href="#device-gaming" data-toggle="collapse" data-parent="#devices">Gaming</a>
+                          <a id="device-gaming-toggle" href="#device-gaming" data-toggle="collapse" data-parent="#devices">Gaming</a>
                         </h4>
                       </div>
                       <div id="device-gaming"  class="panel-collapse collapse">
@@ -330,13 +403,57 @@
 
   <div class="jumbotron">
     <div class="container">
-      <h1 class="page-header">5 Outdated UX Patterns That Are Losing You Money!</h1>
+      <h1>5 Outdated UX Patterns That Are Losing You Money!</h1>
       <p>And how to get your money back.</p>
+      <p><a id="overlay-btn" data-toggle="modal" data-target="#overlay" class="btn btn-danger btn-lg" role="button">Learn more</a></p>
     </div>
   </div>
 
   <main class="container">
+    <div class="row">
+      <article class="col-sm-6">
+        <section>
+          <header class="page-header">
+            <h1>These 5 Outdated UX Patterns Are Losing You Money</h1>
+          </header>
+          <p>While <a href="http://pointnorth.io/#anti-patterns">Anti Patterns</a>, <a href="http://pointnorth.io/#dark-patterns">Dark Patterns</a>, and bad <a href="http://pointnorth.io/#signal-to-noise-ratio">Signal to Noise Ratios</a> abound in user experience design, those are mostly recognized as bad user experience and are easy to call out and try to not use. There are other UX bad practices, however, that are harder to spot.</p>
+          <p>One of the core tenants of good User Experience design is research and refinement of techniques. Most of the ones that are harder to spot are techniques that are used widely throughout the Internet and subsequently widely duplicated without much thought. By researching these techniques, we can find that many of them, despite their proliferation, do not hold up to the User Experience expectations we have.</p>
+        </section>
+        <section>
+          <header class="page-header">
+            <h2>Page Preloaders</h2>
+          </header>
+          <p>Page preloaders are all about <a href="http://pointnorth.io/#performance">performance</a>. When building user experiences, there are two kinds of performance, payload performance and perceived performance. Page preloaders, while many times thought of as a design win by holding off rendering a page until content is loaded, actually wind up breaking both of these user experience expectations</p>
+          <p>Let's discuss a typical page preloader. Typically, page preloaders are added to pages where the developers know the site is going to be slow to load all of its content and display said content. It's a way get across to the user that something is happening, so don't leave, we'll be back in a moment.</p>
+          <p>The problem with this? As <a href="http://e-commercefacts.com/research/2011/07/what-usrs-want-from-mobil/19986_WhatMobileUsersWant_Wp.pdf">Compuware reports</a>, 60% of users will leave a site and won't come back if it takes more than 3 seconds for the site to load. Or, to discuss numbers, a 400ms delay in the amount of time it takes Google to load its search results <a href="http://www.igvita.com/slides/2013/breaking-1s-mobile-barrier.pdf">reduces the average number of daily searches by 0.59%</a>. While that doesn't sound like a lot, it amounts to a <strong>daily loss of $111,000</strong> or about <strong>$40.5 Million a year</strong>! That's some serious money. Bottom line?</p>
+          <p><strong>Performance Affects Conversion</strong></p>
+          <p>It's not enough for a site to be pretty. Performance needs to be designed into a site, not tacked on at the end or covered with a cloth. Page preloaders hide performance problems, but those performance problems don't go away.</p>
+          <p>It's not all bad though! Changes are some of your content is ready to go well before the amount of time has elapsed where you would feel like a preloader is necessary. Show it and continue loading more in the background! Get your users to your content as fast as possible. This will speed up your perceived page performance. Designing for performance will speed up your actual performance. It's a win for your users and it's a win for your bottom line.</p>
+        </section>
+        <section>
+          <header class="page-header">
+            <h2>Mega Menus</h2>
+          </header>
+          <p>Recently, I was </p>
+        </section>
 
+      </article>
+      <aside class="col-sm-offset-1 col-sm-5">
+        <div class="page-header">
+          <h3>More Resources</h3>
+        </div>
+        <dl>
+          <dt><a href="http://pointnorth.io">Point North</a></dt>
+          <dd>A set of modern standards and best practices to align and guide your project</dd>
+          <dt><a href="http://intake.center">Intake.Center</a></dt>
+          <dd>Intake and Content Strategy Webapp</dd>
+          <dt><a href="http://bradfrostweb.com/blog/post/death-to-bullshit-at-creative-mornings/">Death to Bullshit</a></dt>
+          <dd>There's a lot of bullshit happening in our industry. Cut that shit out.</dd>
+          <dt><a href="http://www.ted.com/talks/barry_schwartz_on_the_paradox_of_choice#t-786468">The Paradox of Choice</a></dt>
+          <dd>Barry Schwartz's Paradox of Choice TED Talk</dd>
+        </dl>
+      </aside>
+    </div>
   </main>
 <!--
   <div class="custom-jumbotron">
