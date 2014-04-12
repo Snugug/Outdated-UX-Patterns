@@ -214,3 +214,10 @@ section .page-header {
     opacity: 1;
   }
 }
+
+#title-footer {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  opacity: .75;
+}
