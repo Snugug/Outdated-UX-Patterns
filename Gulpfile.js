@@ -303,7 +303,7 @@ gulp.task('build', ['clean', 'usemin', 'imagemin', 'svgmin']);
 //////////////////////////////
 // Deploy Task
 //////////////////////////////
-gulp.task('deploy', function () {
+gulp.task('git-deploy', function () {
   execute('git add build && git commit -m "Dist Commit"', function () {
     console.log('Temporarily committing build directory');
     execute('git ls-remote origin gh-pages', function (remote) {
@@ -323,13 +323,15 @@ gulp.task('deploy', function () {
 var deployFinish = function () {
   console.log('Pushing build directory to gh-pages')
   execute('git subtree push --prefix build origin gh-pages', function () {
+    console.log('Reseting temporary commit');
     execute('git reset HEAD^', function () {
-      console.log('Reseting temporary commit');
       console.log('Cleaning build directory');
       deleteFolderRecursive('./build');
     });
   });
-}
+};
+
+gulp.task('deploy', ['build', 'git-deploy']);
 
 //////////////////////////////
 // Default Task
