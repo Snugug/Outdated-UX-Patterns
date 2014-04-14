@@ -15,9 +15,14 @@ var imagemin = require('gulp-imagemin');
 var svgmin = require('gulp-svgmin');
 
 var clean = require('gulp-clean');
-var deploy = require("gulp-gh-pages");
 
-var plumber = require('gulp-plumber');
+//////////////////////////////
+// Execute Callback Function
+//////////////////////////////
+var exec = require('child_process').exec;
+function execute(command, callback){
+  exec(command, function(error, stdout, stderr){ callback(stdout); });
+};
 
 
 //////////////////////////////
@@ -112,22 +117,29 @@ gulp.task('build', ['clean', 'usemin', 'imagemin', 'svgmin']);
 //////////////////////////////
 // Deploy Task
 //////////////////////////////
-// gulp.task('deploy', function () {
-//   gulp.src(options.html + '/build/**/*')
-//     .pipe(shell([
-//       'git push origin :gh-pages'
-//     ]))
-//     .pipe(plumber({
-//       errorHandler: error
-//     }))
-//     .pipe(console.log('Hello World'));
-// });
-
-// var error = function (err) {
-//   console.log('Oh Noes!');
-// }
-
+gulp.task('deploy', function () {
+  execute('git add build && git commit -m "Dist Commit"', function () {
+    execute('git ls-remote origin gh-pages', function (remote) {
+      if (remote.length > 0) {
+        execute('git push origin :gh-pages', function () {
+          deployFinish();
+        });
+      }
+      else {
+        deployFinish();
+      }
+    });
+  });
+});
 //////////////////////////////
 // Default Task
 //////////////////////////////
 gulp.task('default', ['watch', 'compass', 'server']);
+
+var deployFinish = function () {
+  execute('git subtree push --prefix build origin gh-pages', function () {
+    execute('git reset HEAD^', function () {
+      console.log('Updated');
+    });
+  });
+}
