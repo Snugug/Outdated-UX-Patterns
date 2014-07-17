@@ -36,6 +36,15 @@ img, video {
   position: relative;
   padding: .25em;
 }
+.title #title h3 {
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  -ms-transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  position: relative;
+}
 
 #loading {
   height: 100vh;
@@ -127,7 +136,7 @@ img, video {
 }
 
 .jumbotron {
-  background: url('../images/dolladollabill.jpg?1397238155');
+  background: url('../images/dolladollabill.jpg?1401228603');
 }
 .jumbotron h1 {
   color: #d9534f !important;
@@ -150,29 +159,29 @@ h1, h2, h3, h4, h5 h6 {
   font-family: "comic-neue";
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/comic-neue/ComicNeue-Regular.eot?1391639656') format("embedded-opentype");
-  src: url('../fonts/comic-neue/ComicNeue-Regular.eot?1391639656#iefix') format("embedded-opentype"), url('../fonts/comic-neue/ComicNeue-Regular.ttf?1391639656') format("truetype");
+  src: url('../fonts/comic-neue/ComicNeue-Regular.eot?1401228602') format("embedded-opentype");
+  src: url('../fonts/comic-neue/ComicNeue-Regular.eot?1401228602#iefix') format("embedded-opentype"), url('../fonts/comic-neue/ComicNeue-Regular.ttf?1401228602') format("truetype");
 }
 @font-face {
   font-family: "comic-neue";
   font-weight: normal;
   font-style: italic;
-  src: url('../fonts/comic-neue/ComicNeue-Regular-Oblique.eot?1396949622') format("embedded-opentype");
-  src: url('../fonts/comic-neue/ComicNeue-Regular-Oblique.eot?1396949622#iefix') format("embedded-opentype"), url('../fonts/comic-neue/ComicNeue-Regular-Oblique.ttf?1396949622') format("truetype");
+  src: url('../fonts/comic-neue/ComicNeue-Regular-Oblique.eot?1401228602') format("embedded-opentype");
+  src: url('../fonts/comic-neue/ComicNeue-Regular-Oblique.eot?1401228602#iefix') format("embedded-opentype"), url('../fonts/comic-neue/ComicNeue-Regular-Oblique.ttf?1401228602') format("truetype");
 }
 @font-face {
   font-family: "comic-neue";
   font-weight: bold;
   font-style: normal;
-  src: url('../fonts/comic-neue/ComicNeue-Bold.eot?1391639656') format("embedded-opentype");
-  src: url('../fonts/comic-neue/ComicNeue-Bold.eot?1391639656#iefix') format("embedded-opentype"), url('../fonts/comic-neue/ComicNeue-Bold.ttf?1391639656') format("truetype");
+  src: url('../fonts/comic-neue/ComicNeue-Bold.eot?1401228602') format("embedded-opentype");
+  src: url('../fonts/comic-neue/ComicNeue-Bold.eot?1401228602#iefix') format("embedded-opentype"), url('../fonts/comic-neue/ComicNeue-Bold.ttf?1401228602') format("truetype");
 }
 @font-face {
   font-family: "comic-neue";
   font-weight: bold;
   font-style: italic;
-  src: url('../fonts/comic-neue/ComicNeue-Bold-Oblique.eot?1396950032') format("embedded-opentype");
-  src: url('../fonts/comic-neue/ComicNeue-Bold-Oblique.eot?1396950032#iefix') format("embedded-opentype"), url('../fonts/comic-neue/ComicNeue-Bold-Oblique.ttf?1396950032') format("truetype");
+  src: url('../fonts/comic-neue/ComicNeue-Bold-Oblique.eot?1401228602') format("embedded-opentype");
+  src: url('../fonts/comic-neue/ComicNeue-Bold-Oblique.eot?1401228602#iefix') format("embedded-opentype"), url('../fonts/comic-neue/ComicNeue-Bold-Oblique.ttf?1401228602') format("truetype");
 }
 #recipe-mega-menu .list-unstyled > li > strong {
   text-transform: uppercase;

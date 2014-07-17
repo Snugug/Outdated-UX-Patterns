@@ -72,6 +72,11 @@ $browser-minimum-versions: (
       position: relative;
       padding: .25em;
     }
+    h3 {
+      @include absolute-center($fixed: true);
+      position: relative;
+
+    }
   }
 }
 
